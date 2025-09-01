@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pt-BR" class="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Layout e Cards - Tailwind</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+  <!-- Header -->
+  <header class="bg-pink-700 text-white">
+    <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
+      <div class="flex items-center space-x-4">
+        <div class="text-2xl font-bold">LT</div>
+        <h1 class="text-xl font-semibold">Londrinense Tech</h1>
+      </div>
+      <nav class="space-x-4">
+        <a href="#" class="hover:underline">Início</a>
+        <a href="#cards" class="hover:underline">Atividade</a>
+        <a href="#exercicios" class="hover:underline">Exercícios</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="max-w-6xl mx-auto p-6">
+    <section class="flex flex-col md:flex-row items-center justify-between gap-8 py-10">
+      <div class="flex-1 space-y-4">
+        <h2 class="text-3xl font-bold">Atividade:</h2>
+        <p class="text-pink-800 dark:text-pink-300">Use apenas HTML e CSS para estilizar os componentes abaixo. Depois, tente recriar com Tailwind.</p>
+        <div class="space-x-4">
+          <a href="#cards" class="bg-pink-700 text-white px-4 py-2 rounded hover:bg-pink-800 transition">Começar</a>
+          <a href="#exercicios" class="border border-pink-700 text-pink-700 dark:text-pink-300 px-4 py-2 rounded hover:bg-pink-100 dark:hover:bg-pink-800 transition">Ver exercícios</a>
+        </div>
+      </div>
+      <div class="flex-1">
+        <img src="https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?auto=format&fit=crop&w=800&q=60" alt="coding laptop" class="rounded shadow-md">
+      </div>
+    </section>
+
+    <!-- Cards Section -->
+    <section id="cards" class="py-10">
+      <h3 class="text-2xl font-bold mb-6">Cartões — Grid responsivo</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <article class="bg-white dark:bg-gray-800 rounded-lg shadow p-4 relative">
+          <div class="flex items-start space-x-4 mb-4">
+            <div class="text-3xl">🧠</div>
+            <div>
+              <h4 class="text-lg font-semibold">Lógica de Programação</h4>
+              <p class="text-sm text-gray-600 dark:text-gray-400">Nível: Iniciante</p>
+            </div>
+          </div>
+          <p class="mb-4">Exercícios práticos para treinar algoritmos e estruturas de controle.</p>
+          <div class="flex space-x-2">
+            <button class="px-3 py-1 rounded bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500 transition">Ver</button>
+            <button class="px-3 py-1 rounded bg-pink-700 text-white hover:bg-pink-800 transition">Editar</button>
+          </div>
+        </article>
+
+        <!-- Card 2 - Com Badge Novo -->
+        <article class="bg-white dark:bg-gray-800 rounded-lg shadow p-4 relative">
+          <span class="absolute top-2 right-2 bg-green-600 text-white text-xs px-2 py-0.5 rounded-full">Novo</span>
+          <div class="flex items-start space-x-4 mb-4">
+            <div class="text-3xl">🌐</div>
+            <div>
+              <h4 class="text-lg font-semibold">Desenvolvimento Web</h4>
+              <p class="text-sm text-gray-600 dark:text-gray-400">Nível: Intermediário</p>
+            </div>
+          </div>
+          <p class="mb-4">Crie páginas responsivas com HTML e CSS.</p>
+          <div class="flex space-x-2">
+            <button class="px-3 py-1 rounded bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500 transition">Ver</button>
+            <button class="px-3 py-1 rounded bg-pink-700 text-white hover:bg-pink-800 transition">Editar</button>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="bg-white dark:bg-gray-800 rounded-lg shadow p-4 relative">
+          <div class="flex items-start space-x-4 mb-4">
+            <div class="text-3xl">🤖</div>
+            <div>
+              <h4 class="text-lg font-semibold">IA Básica</h4>
+              <p class="text-sm text-gray-600 dark:text-gray-400">Nível: Avançado</p>
+            </div>
+          </div>
+          <p class="mb-4">Introdução a conceitos de Machine Learning e experimentos simples.</p>
+          <div class="flex space-x-2">
+            <button class="px-3 py-1 rounded bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500 transition">Ver</button>
+            <button class="px-3 py-1 rounded bg-pink-700 text-white hover:bg-pink-800 transition">Editar</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Exercícios -->
+    <section id="exercicios" class="py-10">
+      <h3 class="text-2xl font-bold mb-4">Exercícios propostos</h3>
+      <ol class="list-decimal ml-6 space-y-2">
+        <li>Transforme o layout em responsivo (2 colunas em telas médias, 3 em grandes).</li>
+        <li>Adicione um badge "Novo" no canto superior direito de um card.</li>
+        <li>Melhore os botões com efeitos de hover.</li>
+        <li>Crie uma versão com tema escuro.</li>
+        <li>Ajuste tipografia e cores para melhor contraste.</li>
+      </ol>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-sm text-gray-600 dark:text-gray-400 py-6">
+      © Londrinense Tech — Material de ensino
+    </footer>
+  </main>
+</body>
+</html>
